@@ -13,7 +13,7 @@ class Solution:
                     max_value = float('-inf')
                     for x in range(3):
                         for y in range(3):
-                            max_value = max(max_value, grid[i + x][j + y])
+                            max_value = max(max_value, grid[i + j][j + y])
                     row.append(max_value)
                 new_matrix.append(row)
 
