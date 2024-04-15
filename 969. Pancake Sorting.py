@@ -15,3 +15,5 @@ class Solution:
                 flips.extend([m+1, n-pancake])
         
         return flips
+    
+
