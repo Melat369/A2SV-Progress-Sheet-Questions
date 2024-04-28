@@ -1,7 +1,7 @@
 class Solution:
     def longestOnes(self, nums: List[int], k: int) -> int:
         l = 0
-        max_consecutive = 0
+        max_conseq = 0
        
         for r, num in enumerate(nums):
             k -=1 - num
@@ -9,9 +9,9 @@ class Solution:
                 k += 1 - nums[l]
                 l += 1
             else:
-                max_consecutive = max(max_consecutive,r-l+1)
+                max_conseq = max(max_conseq,r-l+1)
 
-        return max_consecutive
+        return max_conseq
 
 
          
