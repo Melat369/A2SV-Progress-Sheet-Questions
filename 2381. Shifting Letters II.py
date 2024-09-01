@@ -1,5 +1,7 @@
 class Solution:
+
     def shiftingLetters(self, s: str, shifts: List[List[int]]) -> str:
+
         line_sweep_arr = [0] * (len(s)+1)       
         for start,end,direction in shifts:
             if direction==0:
@@ -10,6 +12,7 @@ class Solution:
         accumulated = 0                        
         res = []
         for i in range(len(s)):
+            
             accumulated += line_sweep_arr[i]    
             chr_num = ord(s[i])-ord('a')        
             chr_num = (chr_num+accumulated)%26  
